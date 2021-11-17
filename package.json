@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "dependencies": {
+    "@aws-sdk/client-comprehend": "^3.41.0"
+  }
+}
