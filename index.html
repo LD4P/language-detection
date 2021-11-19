@@ -21,7 +21,7 @@
           fetch(`${endpoint}?q=${value}`).
             then((response) => response.json()).
             then((json) => {
-              document.querySelector("[name='result']").value = json.body
+              document.querySelector("[name='result']").value = JSON.stringify(json.body.Languages)
             }).
             catch((error) => {
               alert(`There was a problem: ${error}`)
