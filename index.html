@@ -14,9 +14,11 @@
 
     <script>
       window.onload = function() {
+        const endpoint = "https://h4wh62tuz2.execute-api.us-west-2.amazonaws.com/dev"
         document.querySelector('form').addEventListener('submit', event => {
           event.preventDefault();
-          fetch("https://h4wh62tuz2.execute-api.us-west-2.amazonaws.com/dev").
+          const value = document.querySelector("[name='q']").value
+          fetch(`${endpoint}?q=${value}`).
             then((response) => response.json()).
             then((json) => {
               document.querySelector("[name='result']").value = json.body
